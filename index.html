@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Resume</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <form>
+          <!-- Name , Email , Phone , Github , Linkedin -->
+          <legend>Contact Details</legend>
+
+          <!-- name  -->
+          <label for="name">Name :</label>
+          <input type="text"
+          id="name"
+          name="name" 
+          placeholder="Name" 
+          value="" />
+          <br />
+
+          <!-- Email  -->
+          <label for="Email">Email : </label>
+          <input
+            type="email"
+            id="Email"
+            name="Email"
+            placeholder="Email"
+            value=""
+          /><br />
+
+          <!-- phone  -->
+          <label for="Phone">Phone : </label>
+          <input type="tel"
+           id="Phone"
+            name="Phone"
+             placeholder="Phone"
+             value="" /><br />
+
+          <!-- Github -->
+          <label for="Github">Github : </label>
+          <input
+            type="text"
+            id="Github"
+            name="Github"
+            placeholder="Github"
+            value=""
+          /><br />
+
+          <!-- linkedin  -->
+          <label for="Linkedin">Linkedin : </label>
+          <input
+            type="text"
+            id="Linkedin"
+            name="Linkedin"
+            placeholder="Linkedin"
+            value=""
+          /><br />
+
+
+
+          <fieldset>
+            <!-- Degree , College , Starting Year , Passing Year , CGPA -->
+            <legend>Education</legend>
+            <!-- Degree  -->
+            <label for="Degree">Degree : </label>
+            <input
+              type="text"
+              id="Degree"
+              name="Degree"
+              placeholder="Degree"
+              value=""
+            /><br />
+            <!-- College  -->
+            <label for="College">College :</label
+            ><input
+              type="text"
+              id="College"
+              name="College"
+              placeholder="College"
+              value="" 
+            /><br />
+            <!-- Starting Year  -->
+            <label for="Starting Year">Starting Year : </label>
+            <input
+              type="number"
+              id="Starting Year"
+              name="Starting Year"
+              placeholder="Starting Year"
+              value="" 
+            /><br />
+            <!-- Passing Year  -->
+            <label for="Passing Year">Passing Year : </label>
+            <input
+              type="number"
+              id="Passing Year"
+              name="Passing Year"
+              placeholder="Passing Year"
+              value="" 
+            /><br />
+            <!-- CGPA  -->
+            <label for="CGPA">  CGPA : </label>
+            <input type="number" 
+             id="CGPA" 
+             name="CGPA"
+             placeholder="CGPA" 
+             value="" /><br />
+          </fieldset>
+
+
+
+          <fieldset>
+            <!-- skills -->
+             <legend>Skills</legend>
+             Skills: <textarea rows="8" cols="30" 
+                      id="Skills"
+                      name="Skills"
+                        placeholder="Skills"
+                        value=""></textarea>
+          </fieldset>
+
+          <fieldset>
+            <!-- Project , Description , Link -->
+            <legend>Projects</legend>
+            <!-- Project  -->
+            <label for="Project">Project : </label>
+            <input
+              type="text"
+              id="Project"
+              name="Project"
+              placeholder="Project"
+              value=""
+            /><br />
+
+            <!-- decription -->
+            Description: <textarea rows="8" cols="30" 
+            placeholder="Project Description"
+            id="Description"
+            name="Description"
+            value=""></textarea><br>
+
+
+            <!-- Link  -->
+            <label for="Link">Link : </label>
+            <input
+              type="url"
+              id="Link"
+              name="Link"
+              placeholder="Link"
+              required
+              value=""
+            /><br />
+          </fieldset>
+
+
+
+          <fieldset>
+            <!-- Company , Designation , Duration , Description -->
+            <legend>Experience</legend>
+            <!-- Company  -->
+            <label for="Company">Company : </label>
+            <input
+              type="text"
+              id="Company"
+              name="Company"
+              placeholder="Company"
+              value=""
+            /><br />
+
+            <!-- Designation  -->
+            <label for="Designation">Designation : </label>
+            <input
+              type="text"
+              id="Designation"
+              name="Designation"
+              placeholder="Designation"
+              value=""
+            /><br />
+
+            <!-- Duration -->
+            <label for="Duration">Duration : </label>
+            <input
+              type="number"
+              id="Duration"
+              name="Duration"
+              placeholder="Duration in months"
+              value=""
+            /><br />
+            <!-- description -->
+            Description: 
+            <textarea
+             rows="8" cols="30"
+             id="description"
+             name="description"
+             placeholder="Job Description"
+             value=""></textarea><br>
+
+          </fieldset>
+          <button type="submit" class="btn">Submit</button>
+          <button type="reset" class="btn">Reset</button>
+          <button class="btn" onclick="handleLeft()">View & Print</button>
+        </form>
+      </div>
+      <div class="right">
+        
+
+        <div class="name">
+          <!-- Name -->
+          <p id="display-name"></p>
+        </div>
+          
+        <div class="details">
+          <!-- <h2>Contact Details</h2> -->
+            <p id="display-Email"></p>
+            <p id="display-Phone"></p>
+            <p id="display-Github"></p>
+            <p id="display-Linkedin"></p>
+          <!--Email , Phone , Github , Linkedin  -->
+        </div>
+
+        <div class="content">
+          <h2>Education</h2>
+          <p id="display-Degree"></p>
+          <p id="display-College"></p>
+          <p id="display-Starting Year"></p>
+          <p id="display-Passing Year"></p>
+          <p id="display-CGPA"></p>
+        <hr>
+
+          <h2>Skills</h2>
+          <p id="display-Skills"></p>
+
+         <hr>
+
+          <h2>Project</h2>
+          <p id="display-Project"></p>
+          <p id="display-Description"></p>
+          <p id="display-Link"></p>
+
+        <hr>
+
+          <h2>Experience</h2>
+          <p id="display-Company"></p>
+          <p id="display-Designation"></p>
+          <p id="display-Duration"></p>
+          <p id="display-description"></p>
+          
+        </div>  
+
+        <button class="btn print" onclick="handlePrint()">Print</button>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+
